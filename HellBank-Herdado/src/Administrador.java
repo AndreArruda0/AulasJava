@@ -1,35 +1,23 @@
 
-public class Gerente extends Funcionario implements Autenticavel {
+public class Administrador extends Funcionario implements Autenticavel {
 	
 	private int senha;
-	
-	public Gerente(String nome, String cpf, double salario, int senha) {
+
+	public Administrador(String nome, String cpf, double salario, int senha) {
 		super(nome, cpf, salario);
-		this.senha = senha;
 		// TODO Auto-generated constructor stub
 	}
-	
 
-
-
-	
+	@Override
 	public double getBonificacao() {
-		return super.getSalario();
+		return 50;
 	}
-
-
-
-
 
 	@Override
 	public void setSenha(int senha) {
 		this.senha = senha;
 		
 	}
-
-
-
-
 
 	@Override
 	public boolean senha(int senha) {
@@ -39,6 +27,5 @@ public class Gerente extends Funcionario implements Autenticavel {
 			return false;
 		}
 	}
-	
 
 }

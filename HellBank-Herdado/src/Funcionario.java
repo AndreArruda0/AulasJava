@@ -1,5 +1,6 @@
 
-public class Funcionario {
+//Não pode criar objetos dessa classe !
+public abstract class Funcionario {
 	
 	private String nome;
 	private String cpf;
@@ -13,10 +14,8 @@ public class Funcionario {
 		this.salario = salario;
 	}
 
-	public double getBonificacao() {
-		return (this.salario * 0.1);
-
-	}
+	//Metodo sem corpo. Reescrito nas classes filhas.
+	public abstract double getBonificacao();
 	
 	public String getNome() {
 		return nome;
